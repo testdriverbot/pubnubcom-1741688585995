@@ -1,0 +1,37 @@
+version: 4.2.13
+session: 67d011c3e33a885faede5466
+steps:
+  - prompt: Click on the "Solutions" link in the header.
+    commands:
+      - command: hover-text
+        text: Solutions
+        description: solutions link in the header
+        action: click
+  - prompt: Click on the "Solutions" link in the header.
+    commands:
+      - command: hover-text
+        text: Chat
+        description: chat option in the solutions dropdown
+        action: click
+  - prompt: Assert that the Solutions page loads successfully.
+    commands:
+      - command: assert
+        expect: Build communities with live chat functionality is visible
+  - prompt: Assert that the Solutions page loads successfully.
+    commands:
+      - command: assert
+        expect: Build communities with live chat functionality is visible
+  - prompt: Assert that the Solutions page loads successfully.
+    commands:
+      - command: assert
+        expect: Build communities with live chat functionality is visible
+  - prompt: Assert that the Solutions page loads successfully.
+    commands:
+      - command: assert
+        expect: Build communities with live chat functionality is visible
+  - prompt: >-
+      Verify the presence of key sections on the Solutions page.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: Build communities with live chat functionality is visible
