@@ -1,0 +1,21 @@
+version: 4.2.13
+session: 67d011ba6ac63cc8b4cc2ea7
+steps:
+  - prompt: Click on the "Start Building" button on the homepage.
+    commands:
+      - command: hover-text
+        text: Start Building
+        description: button to begin the building process on the homepage
+        action: click
+  - prompt: Assert that the appropriate resource page or documentation opens.
+    commands:
+      - command: assert
+        expect: the registration page with "Register for free" is visible
+  - prompt: >-
+      Verify that the page contains relevant information for building with
+      PubNub.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          the page contains "Build in minutes with our APIs, SDKs, and sample
+          apps"
