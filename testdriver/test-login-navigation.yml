@@ -1,0 +1,25 @@
+version: 4.2.13
+session: 67d011c36ac63cc8b4cc2ead
+steps:
+  - prompt: Click on "LOGIN" in the top header.
+    commands:
+      - command: hover-text
+        text: LOGIN
+        description: login button in the top header
+        action: click
+  - prompt: Assert that the login page loads successfully.
+    commands:
+      - command: assert
+        expect: >-
+          the login page is displayed with "Log in" and "Email address" fields
+          visible
+  - prompt: Verify the presence of email and password input fields.
+    commands:
+      - command: assert
+        expect: the login page displays "Email address" and "Password" input fields
+  - prompt: >-
+      Assert no errors are present on the login page.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: no error messages are visible on the login page
